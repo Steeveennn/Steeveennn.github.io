@@ -103,10 +103,10 @@
         const html = document.documentElement;
         html.classList.toggle('dark-mode');
 
-        localStorage.setItem('darkMode', html.classList.contains('dark-mode'));
+        sessionStorage.setItem('darkMode', html.classList.contains('dark-mode'));
     }
 
-    const isDarkMode = localStorage.getItem('darkMode') === 'true';
+    const isDarkMode = sessionStorage.getItem('darkMode') === 'true';
 
     const html = document.documentElement;
     if (isDarkMode) {
