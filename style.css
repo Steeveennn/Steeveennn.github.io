@@ -1,5 +1,10 @@
 /* || General setup */
 
+:root {
+    --clr-dark: #070a13
+    --clr-light: #f1f5f9
+}
+
 html, body {
   margin: 0;
   padding: 0;
@@ -7,30 +12,31 @@ html, body {
 
 html {
   font-size: 10px;
-  background-color: #a9a9a9;
 }
 
 body {
   width: 70%;
   margin: 0 auto;
+   background-color: var(--clr-light);
+   color: var(--clr-dark);
 }
 
 /* || typography */
 
 h1, h2, h3 {
   font-family: 'Sonsie One', cursive;
-  color: #2a2a2a;
+  color: var(--clr-dark);
 }
 
 p, input, li {
   font-family: 'Open Sans Condensed', sans-serif;
-  color: #2a2a2a;
+  color: var(--clr-dark);
 }
 
 h1 {
   font-size: 4rem;
   text-align: center;
-  color: black;
+  color: var(--clr-dark);
   text-shadow: 1px 1px 3px black;
 }
 
@@ -51,13 +57,13 @@ p, li {
 /* || header layout */
 
 nav, article, aside, footer {
-  background-color: white;
+  background-color: #bebebe;
   padding: 1%;
 }
 
 nav {
   height: 50px;
-  background-color: #cccccc;
+  background-color: var(clr-light);
   display: flex;
   margin-bottom: 10px;
 }
@@ -80,7 +86,7 @@ nav a {
   font-size: 2rem;
   text-transform: uppercase;
   text-decoration: none;
-  color: black;
+  color: var(--clr-dark);
 }
 
 nav form {
@@ -89,6 +95,7 @@ nav form {
   align-items: center;
   height: 100%;
   padding: 0 2em;
+  color: white;
 }
 
 input {
@@ -105,7 +112,7 @@ input[type="submit"] {
   margin-left: 1rem;
   background: #333;
   border: 0;
-  color: white;
+  color: var(clr-light);
 }
 
 /* || main layout */
@@ -121,7 +128,7 @@ article {
 aside {
   flex: 1;
   margin-left: 10px;
-  background-color: #cccccc;
+  background-color: var(clr-light);
 }
 
 aside li {
@@ -130,4 +137,9 @@ aside li {
 
 footer {
   margin-top: 10px;
+}
+
+.dark-mode {
+    --clr-light: #070a13;
+    --clr-dark: #f1f5f9;
 }

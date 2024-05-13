@@ -25,6 +25,7 @@
         <li><a href="#">Interesting topics</a></li>
         <li><a href="#">Cute pets</a></li>
         <li><a href="./fancifymytext">FancifyMyText</a></li>
+        <li> <button id="darkModeToggle" onclick="toggleDarkMode()">Toggle Dark Mode</button></li>
     </ul>
 
     <!-- A Search form is another common non-linear way to navigate through a website. -->
@@ -97,5 +98,20 @@
 <footer>
     <p>©Copyright 2024 by nobody. All rights not reserved.</p>
 </footer>
+<script>
+    function toggleDarkMode() {
+        const html = document.documentElement;
+        html.classList.toggle('dark-mode');
+
+        localStorage.setItem('darkMode', html.classList.contains('dark-mode'));
+    }
+
+    const isDarkMode = localStorage.getItem('darkMode') === 'true';
+
+    const html = document.documentElement;
+    if (isDarkMode) {
+        html.classList.add('dark-mode');
+    }
+</script>
 </body>
 </html>
